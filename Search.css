@@ -1,0 +1,8 @@
+.Search {
+    position: relative;
+    top: 6rem;
+    right:10rem;  
+}
+.Search input{
+    position: fixed;
+}

@@ -1,0 +1,14 @@
+.logo img {
+    height: 7rem;
+    width: auto;
+    position: fixed;
+    
+  }
+  
+  .logo {
+    padding-top: 10px;
+    transition: all 0.3s ease-out;
+    height: 100px;
+    margin-right: 80rem;
+  }
+  
