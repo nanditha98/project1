@@ -1,0 +1,48 @@
+.spacer1    {
+    clear:both; width:100%; height:10px;}
+.spacer2    {clear:both; width:100%; height:20px;}
+.offcanvas-toggle {
+    /*background: #f8f8f8;*/
+    border: 0px;
+    _margin-right: 0px !important;
+}
+@media (max-width: 992px) {
+    .navbar-offcanvas-submenu { background-color: #fff !important; z-index: 9999 !important; padding: 0px;}
+    #offcanvas-subtoggle { margin-right: 0px; margin-top: 0px !important; margin-top: 0px; z-index: 99; position:relative; margin-bottom:20px;}
+    .navbar-subtoggle a { background: #0d65a7 !important; display: block; width: 100%;  text-align: center;  color: #fff !important;   border-radius: 0px; text-decoration: none;  cursor: pointer; padding:10px;}
+ 
+    }
+    @media (min-width: 992px){
+        .navbar-toggle {
+            display: none;
+            }
+        }
+        
+        .panel {
+            margin-bottom: 0px;
+            padding-bottom:10px;
+            background-color: #f2f9ff;
+            border: 1px solid #0d65a7;
+            border-radius: 0px;
+        }
+            
+        
+.cat-menu ul.catmenu { padding:0; margin:0px 8px 8px; color:#7a7a7a; }
+.cat-menu ul.catmenu li { padding:7px 0px; margin:0; list-style:none; border-bottom:1px solid #ddd;}
+.cat-menu ul.catmenu ul { padding:0px 0px; margin:0 0 0 10px;}
+.cat-menu  a {color:#204a77 !important; text-decoration:none; display:block;}
+.cat-menu .active> a  {color:#000 !important;}
+.cat-menu ul.catmenu li .fa {font-size:9px; border:1px solid #0f75bd; padding:3px 4px; margin-right:0px; color:#0f75bd}
+.cat-menu ul.catmenu ul li { padding:5px 0px 5px 0px; margin:0px 0px 0px 0px; border-bottom:1px solid #eee;}
+.cat-menu ul.catmenu ul li:last-child {border:0px; padding-bottom:0px}
+
+.panel h2 {font-weight:bold; font-size:20px !important; padding:10px 15px 0px; color:#192c46}
+.panel_trigger      {overflow:hidden; display:block; color:#000; text-transform:none; font-weight:bold;}
+.panel_trigger > a    {   _background:#fff; color:#000;  text-decoration: none; display: block; position: relative;   outline:none; padding: 5px 40px 0px 5px; -webkit-transition:  color 0.2s ease-in-out; -moz-transition:  color 0.2s ease-in-out; -o-transition:  color 0.2s ease-in-out; -ms-transition:  color 0.2s ease-in-out; transition:  color 0.2s ease-in-out; padding:10px 15px 0px;}
+.panel_content          {_background:#fff; padding:5px;}
+
+.checkbox label{
+    float: right;
+    margin-left: 10px;
+}
+ 

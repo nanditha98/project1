@@ -1,14 +1,16 @@
-.logo img {
-    height: 7rem;
-    width: auto;
-    position: fixed;
-    
-  }
-  
-  .logo {
-    padding-top: 10px;
-    transition: all 0.3s ease-out;
-    height: 100px;
-    margin-right: 80rem;
-  }
-  
+/* .img-fulid{
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    margin-left: 3rem;   
+    position: absolute;
+    top: 2px;
+    overflow: hidden;   
+} */
+
+.img-fulid{
+    width:90px;
+    height: 80px;
+    position: relative;
+    top: 10px;
+}
