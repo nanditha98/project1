@@ -1,43 +1,38 @@
-import React from "react";
+// import React from "react";
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import "./Home.css";
 
-// import { Link } from "react-router-dom";
-import "./Home.css";
-import { Navbar,Nav,NavDropdown } from "react-bootstrap";
-import SearchUser from "../Search/Search";
+// function Home(){
+//     return(
+//         <div className="container">
+//          <img src="https://assets.telegraphindia.com/telegraph/2022/Dec/1670407374_untitled-design-2022-12-07t152946-931.jpg"  className="img-fulid" alt="logo"/>
+//         </div>
+        
+//     )
+// }
+// export default Home;
 
 
-function Home(){
-    let user=JSON.parse(localStorage.getItem('user-info'))
-    console.log(user);
-    function logOut(){
-        localStorage.clear();
-        window.location.href="register";
+import React,{useState} from "react";
+
+const Form = (props) =>{
+    const[name,setName]=useState("");
+    const handleChange = (e)=>{
+        setName(e.target.value);
+        
     }
-    return(
-    
-        <Navbar bg="light" variant="light">
-            <Nav className="mr-auto nav_bar_wrapper">
-                <div className="logo">
-                <img src=".\images\Defence_Research_and_Development_Organisation_Logo.png" alt="logo" />
-                {
-                    localStorage.getItem('user-info') 
-                }
-                </div>               
-            </Nav>
-           
-            <SearchUser/>
-           
-            <Nav>
-                <NavDropdown title={user && user.name}>
-                    <NavDropdown.Item onClick={logOut}>Logout</NavDropdown.Item>
-                </NavDropdown>
-            </Nav>
-        </Navbar>
-        
-        
-            
-        
-    )
+const handleSubmit = (e) =>{
+    e.preventDefault();
+    props.onSubmit(name);
 }
-
-export default Home;
+return(
+    <div>
+        <form onSubmit={handleSubmit}>
+            <input type="text" value={props.name} onChange={handleChange} />
+            <p>{name}</p>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+)
+}
+export default Form
