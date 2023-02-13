@@ -65,33 +65,69 @@
 
 
 // import React from "react";
+// import Navbar from "./components/Navbar/Navbar";
 // import Home from "./Main/Home/Home";
-// import Navbar1 from "./Main/Navbar/Navbar1";
-// import SideNav from "./Main/SideNav/SideNav"
+// // import Navbar1 from "./Main/Navbar/Navbar1";
+// // import SideNav from "./Main/SideNav/SideNav"
 
 
 // function App(){
 //   return(
 //     <div>
 //       {/* <Home/> */}
-//      <Navbar1/> 
-//     <SideNav/>
+//      {/* <Navbar1/> 
+//     <SideNav/> */}
+//     <Navbar/>
 //     </div>
 //   )
 // }
 // export default App;
 
-import Form from "./Main/Home/Home";
-function App(){
-  const getData = (data) =>{
-    console.log("coming to react js",data);
+// import Form from "./Main/Home/Home";
+// function App(){
+//   const getData = (data) =>{
+//     console.log("coming to react js",data);
 
-  }
-  return(
-<Form onSubmit={getData}/>
-  )
+//   }
+//   return(
+// <Form onSubmit={getData}/>
+//   )
+// }
+
+// export default App;
+
+
+
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.css'
+import { Nav, Navbar } from 'react-bootstrap'
+import SideNav from './Main/SideNav/SideNav';
+
+function App() {
+  return (
+    <div className="App">
+      <Navbar bg="dark" variant="dark"
+        sticky="top" expand="sm" collapseOnSelect>
+        <Navbar.Brand>
+         {' '}
+          Logo
+        </Navbar.Brand>
+
+        <Navbar.Toggle className="coloring" />
+        <Navbar.Collapse>
+          <Nav>
+            <Nav.Link href="/home">home</Nav.Link>
+            <Nav.Link href="/Search">Search</Nav.Link>
+            <Nav.Link href="/MachineTranslation">MachineTranslation</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+
+      </Navbar>
+      <div className="content">
+        <SideNav/>
+      </div>
+    </div>
+  );
 }
 
 export default App;
-
-
