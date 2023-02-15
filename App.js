@@ -98,36 +98,93 @@
 
 
 
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.css'
-import { Nav, Navbar } from 'react-bootstrap'
-import SideNav from './Main/SideNav/SideNav';
+// import './App.css';
+// import 'bootstrap/dist/css/bootstrap.css'
+// import { Nav, Navbar } from 'react-bootstrap'
+// import SideNav from './Main/SideNav/SideNav';
 
-function App() {
+// function App() {
+//   return (
+//     <div className="App">
+//       <Navbar bg="dark" variant="dark"
+//         sticky="top" expand="sm" collapseOnSelect>
+//         <Navbar.Brand>
+//          {' '}
+//           Logo
+//         </Navbar.Brand>
+
+//         <Navbar.Toggle className="coloring" />
+//         <Navbar.Collapse>
+//           <Nav>
+//             <Nav.Link href="/home">home</Nav.Link>
+//             <Nav.Link href="/Search">Search</Nav.Link>
+//             <Nav.Link href="/MachineTranslation">MachineTranslation</Nav.Link>
+//           </Nav>
+//         </Navbar.Collapse>
+
+//       </Navbar>
+//       <div className="content">
+//         <SideNav/>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+
+import React, { useEffect } from "react";
+import "./App.css";
+
+// Importing TagCloud package
+import TagCloud from "TagCloud";
+
+const App = () => {
+  // Animation settings for Text Cloud
+  useEffect(() => {
+    return () => {
+      const container = ".tagcloud";
+      const texts = [
+        "HTML",
+        "CSS",
+        "SASS",
+        "JavaScript",
+        "React",
+        "Vue",
+        "Nuxt",
+        "NodeJS",
+        "Babel",
+        "Jquery",
+        "ES6",
+        "GIT",
+        "GITHUB",
+      ];
+
+      const options = {
+        radius: 300,
+        maxSpeed: "normal",
+        initSpeed: "normal",
+        keep: true,
+      };
+
+      TagCloud(container, texts, options);
+    };
+  }, []);
+
   return (
-    <div className="App">
-      <Navbar bg="dark" variant="dark"
-        sticky="top" expand="sm" collapseOnSelect>
-        <Navbar.Brand>
-         {' '}
-          Logo
-        </Navbar.Brand>
-
-        <Navbar.Toggle className="coloring" />
-        <Navbar.Collapse>
-          <Nav>
-            <Nav.Link href="/home">home</Nav.Link>
-            <Nav.Link href="/Search">Search</Nav.Link>
-            <Nav.Link href="/MachineTranslation">MachineTranslation</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-
-      </Navbar>
-      <div className="content">
-        <SideNav/>
+    <>
+      <div className="text-shpere">
+        {/* span tag className must be "tagcloud"  */}
+        <span className="tagcloud"></span>
       </div>
-    </div>
+    </>
   );
-}
+};
 
 export default App;
+
+
+// npm i -S TagCloud
+
+
